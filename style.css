@@ -71,10 +71,10 @@ button:hover {
 }
 
 .menu img {
-  height: 40px;
-  margin-right: 20px;
+  height: auto;
   max-width: 120px;
-  width: auto;
+  width: 100%;
+  margin-right: 20px;
   align-self: flex-start;
 }
 
@@ -101,6 +101,10 @@ button:hover {
   }
 
   .menu img {
-    margin-bottom: 10px;
-  }
+  height: auto;
+  max-width: 120px;
+  width: 100%;
+  margin-right: 20px;
+  align-self: flex-start;
+}
 }
