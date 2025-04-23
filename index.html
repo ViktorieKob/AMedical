@@ -6,7 +6,7 @@
 <title>Přihlášení – Docházka</title>
 <link href="style.css" rel="stylesheet"/>
 </head>
-<body><div id="menu-container"></div>
+<body>
 <div class="login-container">
 <img alt="Advantis Medical logo" class="logo" src="Logo.png.png"/>
 <h2>Přihlášení</h2>
@@ -46,14 +46,5 @@
     }
   </script>
 
-<script>
-  fetch('menu.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('menu-container').innerHTML = data;
-      const logo = document.querySelector('.menu img');
-      if (logo) logo.src = 'Logo.png.png';
-    });
-</script>
 </body>
 </html>
