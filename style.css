@@ -58,25 +58,7 @@ button:hover {
 }
 
 /* Styl pro jednotné menu */
-.menu {
-  position: sticky;
-  top: 0;
-  background-color: #0b2c4d;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  z-index: 999;
-  flex-wrap: wrap;
-}
 
-.menu img {
-  height: auto;
-  max-width: 120px;
-  width: 100%;
-  margin-right: 20px;
-  align-self: flex-start;
-}
 
 .menu a {
   color: white;
@@ -91,10 +73,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  
 
   .menu a {
     margin: 10px 0;
@@ -132,4 +111,42 @@ th {
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+/* Jednotný styl menu */
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: #0b2c4d;
+  padding: 10px 20px;
+  color: white;
+  overflow-x: auto;
+}
+
+.menu img {
+  max-height: 40px;
+  width: auto;
+  max-width: 120px;
+  flex-shrink: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

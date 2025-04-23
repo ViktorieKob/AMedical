@@ -2,11 +2,13 @@
 
 <html lang="cs">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8"/>
 <title>Přihlášení – Docházka</title>
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+  <div id="menu-container"></div>
 <div class="login-container">
 <img alt="Advantis Medical logo" class="logo" src="Logo.png.png"/>
 <h2>Přihlášení</h2>
@@ -45,6 +47,17 @@
         });
     }
   </script>
+
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('menu-container').innerHTML = data;
+      const logo = document.querySelector('.menu img');
+      if (logo) logo.src = 'Logo.png.png';
+    });
+</script>
 
 </body>
 </html>
