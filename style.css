@@ -73,6 +73,9 @@ button:hover {
 .menu img {
   height: 40px;
   margin-right: 20px;
+  max-width: 120px;
+  width: auto;
+  align-self: flex-start;
 }
 
 .menu a {
